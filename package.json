@@ -1,0 +1,17 @@
+{
+  "name": "native-modules",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "juliangruber/native-modules",
+  "description": "Report native modules used",
+  "bin": {
+    "native-modules": "index.js"
+  },
+  "dependencies": {
+    "is-native-module": "^1.0.1"
+  },
+  "devDependencies": {
+    "dat-node": "^0.1.1",
+    "discovery-swarm": "^4.0.2"
+  }
+}
