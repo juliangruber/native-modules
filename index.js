@@ -4,6 +4,14 @@
 
 const fs = require('fs')
 const isNative = require('is-native-module')
+const chalk = require('chalk')
+
+let first = true
+
+const check = truthy =>
+  truthy
+    ? chalk.green('✓')
+    : chalk.red('×')
 
 const scan = dir => {
   fs.readdir(dir, (err, files) => {
@@ -12,9 +20,16 @@ const scan = dir => {
       if (err) return
       const pkg = JSON.parse(json.toString('utf8'))
       if (isNative(pkg)) {
-        console.log(dir
+        if (first) {
+          console.log('PB CI Module')
+          first = false
+        }
+        const path = dir
           .replace('node_modules/', '')
-          .replace(/\/?node_modules\//g, ' -> '))
+          .replace(/\/?node_modules\//g, ' -> ')
+        const pb = !!pkg.dependencies.prebuild
+        const ci = !!pkg.devDependencies['prebuild-ci']
+        console.log(`${check(pb)}  ${check(ci)}  ${path}`)
       }
     })
     files
