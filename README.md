@@ -11,12 +11,6 @@ Checks for presence of [prebuild](https://npmjs.org/package/prebuild) and [prebu
 
 ```bash
  $ native-modules 
- discovery-swarm -> utp-native
- dat-node -> hyperdrive -> rabin
- dat-node -> level -> leveldown
- dat-node -> hyperdrive-import-files -> chokidar -> fsevents
- dat-node -> hyperdrive -> hypercore -> sodium-signatures -> sodium-prebuilt
- dat-node -> hyperdrive -> hypercore -> hypercore-protocol -> sodium-encryption -> sodium-prebuilt
 ```
 
 ## Installation
