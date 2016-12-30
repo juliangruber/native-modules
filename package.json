@@ -13,6 +13,6 @@
   },
   "devDependencies": {
     "dat-node": "^0.1.1",
-    "discovery-swarm": "^4.0.2"
+    "discovery-swarm": "^4.1.2"
   }
 }
