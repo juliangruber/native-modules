@@ -12,7 +12,7 @@
     "is-native-module": "^1.0.1"
   },
   "devDependencies": {
-    "dat-node": "^1.0.0",
+    "dat-node": "^1.1.1",
     "discovery-swarm": "^4.0.2"
   }
 }
