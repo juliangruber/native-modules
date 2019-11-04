@@ -27,8 +27,8 @@ const scan = dir => {
         const path = dir
           .replace('node_modules/', '')
           .replace(/\/?node_modules\//g, ' -> ')
-        const pb = !!pkg.dependencies.prebuild
-        const ci = !!pkg.devDependencies['prebuild-ci']
+        const pb = pkg.dependencies && !!pkg.dependencies.prebuild
+        const ci = pkg.devDependencies && !!pkg.devDependencies['prebuild-ci']
         console.log(`${check(pb)}  ${check(ci)}  ${path}`)
       }
     })
