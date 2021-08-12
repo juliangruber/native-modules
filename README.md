@@ -1,4 +1,3 @@
-
 # native-modules
 
 Report on the native node modules used by your application or module.
@@ -10,7 +9,7 @@ Checks for presence of [prebuild](https://npmjs.org/package/prebuild) and [prebu
 ## Usage
 
 ```bash
- $ native-modules 
+ $ native-modules
 ```
 
 ## Installation
