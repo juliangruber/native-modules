@@ -12,13 +12,13 @@
     "test": "prettier-standard && standard && node ."
   },
   "dependencies": {
-    "chalk": "^1.1.3",
-    "is-native-module": "^1.0.1"
+    "chalk": "^5.0.1",
+    "is-native-module": "^1.1.3"
   },
   "devDependencies": {
-    "dat-node": "^3.5.15",
+    "dat-node": "^4.0.1",
     "discovery-swarm": "^6.1.0",
     "prettier-standard": "^16.4.1",
-    "standard": "^16.0.3"
+    "standard": "^17.0.0"
   }
 }
