@@ -22,13 +22,13 @@ const scan = dir =>
       )
     })(),
     (async () => {
-      let json
+      let pkg
       try {
-        json = await fs.readFile(`${dir}/package.json`)
+        const json = await fs.readFile(`${dir}/package.json`)
+        pkg = JSON.parse(json.toString('utf8'))
       } catch (_) {
         return
       }
-      const pkg = JSON.parse(json.toString('utf8'))
       if (isNative(pkg)) {
         if (isFirst) {
           console.log('PB CI Module')
