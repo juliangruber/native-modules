@@ -82,12 +82,14 @@ if (hasArg('-h') || hasArg('--help')) {
   ]
   console.log(help.join('\n'))
 } else {
-  scan('node_modules').then(result => {
-    if (format === FORMAT_JSON) {
-      console.log(JSON.stringify(items))
-    }
-  }).catch(err => {
-    console.error(err)
-    process.exit(1)
-  })
+  scan('node_modules')
+    .then(result => {
+      if (format === FORMAT_JSON) {
+        console.log(JSON.stringify(items))
+      }
+    })
+    .catch(err => {
+      console.error(err)
+      process.exit(1)
+    })
 }
